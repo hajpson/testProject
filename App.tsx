@@ -19,21 +19,21 @@ function App(): JSX.Element {
 
   return (
     <GestureHandlerRootView style={{ flex: 1}}>
-    <TodosProvider>
-      <NavigationContainer>
-        <Stack.Navigator initialRouteName='Home' screenOptions={{ 
-          headerStyle: { backgroundColor: colors.nightPurple },
-          headerTitleStyle: { color: colors.white, fontFamily: 'Josefin Sans Bold' },
-          headerTintColor: colors.white,
-          headerBackTitleStyle: { fontFamily: 'Josefin Sans Bold' }
-          }}>
-          <Stack.Screen name='Home' component={MainPage} />
-          <Stack.Screen name='Details' component={DetailsPage} />
-          <Stack.Screen name='New' component={NewTodoPage} />
-          <Stack.Screen name='Edit' component={EditPage} />
-        </Stack.Navigator>
-      </NavigationContainer>
-    </TodosProvider>
+      <TodosProvider>
+        <NavigationContainer>
+          <Stack.Navigator initialRouteName='Home' screenOptions={{ 
+            headerStyle: { backgroundColor: colors.nightPurple },
+            headerTitleStyle: { color: colors.white, fontFamily: 'Josefin Sans Bold' },
+            headerTintColor: colors.white,
+            headerBackTitleStyle: { fontFamily: 'Josefin Sans Bold' }
+            }}>
+            <Stack.Screen name='Home' component={MainPage} />
+            <Stack.Screen name='Details' component={DetailsPage} />
+            <Stack.Screen name='New' component={NewTodoPage} />
+            <Stack.Screen name='Edit' component={EditPage} />
+          </Stack.Navigator>
+        </NavigationContainer>
+      </TodosProvider>
     </GestureHandlerRootView>
   );
 }
